@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{article}
+%\usepackage{macros}
+
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{framed,float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{soul}
+\usepackage{multirow}
+\usepackage{comment}
+\usepackage{braket}
+\usepackage{todonotes}
+\usepackage{youngtab}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,decorations.markings}
+
+\usepackage[left=0.5cm, right=0.5cm, top=0.5cm, bottom=1cm]{geometry}
+
+\usepackage{color}
+
+\begin{document}
+\section{Gauge theory}
+I will not use the language of fibre bundle to construct it strictly, but just simplely write down main ideas.
+\subsection{Non-Abelian Gauge Theory}
+We have a Lie-algebra-valued one-form $A_\mu^a t^a \mathrm{d}x^\mu\in\mathfrak{g}\times \Lambda^1$, which is called a \textit{connection}. Thus $A_\mu\equiv A_\mu^a t^a\in \mathfrak{g}$. 
+We have a Lie-algebra-valued two-form 
+\begin{equation}
+    F_{\mu \nu}\mathrm{d}x^\mu\wedge \mathrm{d}x^\nu=\partial_\mu A_\nu \mathrm{d}x^\mu\wedge \mathrm{d}x^\nu-\partial_\nu A_\mu \mathrm{d}x^\mu\wedge \mathrm{d}x^\nu-i[A_\mu,A_\nu]\mathrm{d}x^\mu\wedge \mathrm{d}x^\nu
+\end{equation}
+which is called a \textit{curvature}. 
+The Lie-algebra-valued component is $F_{\mu \nu}=\partial_\mu A_\nu-\partial_\nu A_\mu-i[A_\mu,A_\nu]$.\par
+In a representation $R$  of the Lie algebra $\mathfrak{g}$, the \textit{covariant derivative} for representation-space-vector-valued scalar (0-form) $\psi$ 
+\begin{equation}
+    \mathcal{D}_\mu \psi=\partial_\mu \psi-iA_\mu \psi
+\end{equation}
+The components,
+\begin{equation}
+    \mathcal{D}_\mu \psi^i=\partial_\mu \psi^i-iA_\mu^a {R(t^a)^i}_j \psi^j,\qquad i,j=1,2,\dots,\dim R
+\end{equation}
+For a Lie-algebra-valued object $\phi=\phi^a t^a$, the covariant derivative,
+\begin{equation}
+    \mathcal{D}\phi=\partial \phi-i[A_\mu,\phi].
+\end{equation}
+$\phi^a$ can be a scalar, one-form or any other. We can get,
+\begin{equation}
+    [\mathcal{D}_\mu,\mathcal{D}_\nu]=-iF_{\mu \nu}
+\end{equation}
+I gather some elements of gauge theory above, now we begin the physical part.\par
+The action of Yang-Mills,
+\begin{equation}
+    S_{YM}=\frac{1}{-2g}\int d^4 x\tr(F^{\mu \nu}F_{\mu \nu}).
+\end{equation}
+The classical e.o.m for this action is,
+\begin{equation}
+    \mathcal{D}_\mu F^{\mu \nu }=0
+\end{equation}
+The action has a symmetry, for
+\begin{equation}
+    \Omega(x)\in G
+\end{equation}
+The action is invariant under,
+\begin{equation}
+    A_\mu\to \Omega(x)A_\mu \Omega^{-1}(x)+i \Omega(x)\partial_\mu \Omega^{-1}(x)    
+\end{equation} 
+leading to,
+\begin{equation}
+    F^{\mu \nu}\to \Omega(x)F^{\mu \nu}\Omega^{-1}(x)
+\end{equation}
+\textbf{Wilson lines} and \textbf{Wilson loops}.
+\subsection{Quantization of Gauge Theory}
+\subsection{Renormalization in Gauge Theory}
+\end{document}

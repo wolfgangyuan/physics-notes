@@ -1,0 +1,87 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{framed,float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{soul}
+\usepackage{multirow}
+\usepackage{comment}
+\usepackage{braket}
+\usepackage{todonotes}
+\usepackage{youngtab}
+\usepackage{slashed}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,decorations.markings}
+\title{Anomalies and Spontaneous Symmetry Breakings}
+\author{Qing-Jie Yuan}
+\date{ }
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{ABJ anomaly}
+For a theory of massless Dirac fermions coupled to an electromagnetic gauge field in $d=3+1$ dimensions,
+the action for the fermions is
+\begin{equation}
+    S=\int d^4 x\; i\bar{\psi}\slashed{D}\psi.
+\end{equation} 
+Here the gauge field is considered as a fixed backgroud field.
+The symmetries for this action are,
+\begin{equation}\label{ABJ-action}
+    \psi\to e^{i \alpha}\psi
+\end{equation}
+with the corresponding current,
+\begin{equation}
+    j^\mu=\bar{\psi}\gamma^{\mu}\psi,
+\end{equation}
+and
+\begin{equation}
+    \psi\to e^{i \alpha \gamma^5}\psi
+\end{equation}
+with the corresponding current,
+\begin{equation}
+    j^{\mu}_A=\bar\psi \gamma^\mu \gamma^5 \psi.
+\end{equation}
+(\textbf{Aside.})
+The action \eqref{ABJ-action} can be written as
+\begin{equation}
+    S=\int d^4 x\; i\bar{\psi}\slashed{\partial}\psi+j^{\mu}A_{\mu}.
+\end{equation}
+Thus if the action is invariant under the gauge transformation $A_\mu\to A_\mu+\partial_\mu \alpha$,
+we have $\partial_\mu j^\mu=0$.\par
+In classial theory, we should have $\partial_\mu j_A^{\mu}=0$. It is true, while in quantum theory,
+\begin{equation}\label{chiral-anomaly}
+    \partial_\mu j_A^{\mu}= \frac{e^2}{16\pi^2}\epsilon^{\mu \nu \rho \sigma}F_{\mu \nu}F_{\rho \sigma}.
+\end{equation} 
+This is ABJ or chiral anomaly.
+\subsection{Deriving the chiral anomaly}
+
+\section{Gauge anomalies}
+Anomalies in gauge symmetries kill all physics completely.
+
+\section{'t Hooft anomalies}
+\begin{quote}
+    A global symmetry with a 't Hooft anomaly remains a symmetry in the quantum
+ theory. You only run into trouble if you couple the symmetry to a background gauge field, in which
+ case the charge is no longer conserved. You run into real trouble if you try to couple
+ the symmetry to a dynamical gauge field because then the 't Hooft anomaly becomes
+ a gauge anomaly and the theory ceases to make sense. In other words, the 't Hooft
+ anomaly is an obstruction to gauging a global symmetry.
+\end{quote}
+
+
+
+\end{document}

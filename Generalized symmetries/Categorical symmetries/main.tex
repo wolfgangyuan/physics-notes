@@ -1,0 +1,193 @@
+\documentclass[a4paper,11pt]{article}
+%\usepackage{macros}
+
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{framed,float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{soul}
+\usepackage{multirow}
+\usepackage{comment}
+\usepackage{braket}
+\usepackage{todonotes}
+\usepackage{youngtab}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,decorations.markings}
+
+\usepackage[left=2.8cm, right=2.8cm, top=3cm, bottom=2.6cm]{geometry}
+
+\usepackage{color}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{proposition}[definition]{Proposition}
+
+\begin{document}
+\tableofcontents
+
+\section{Introduction}
+In this article, 
+
+%%%%%%%%%%%%%%%%
+\section{Lattice Ising Model}
+I supp
+
+%%%%%%%%%%%%%%%%
+\section{Yang-Mills Mass Gap and Confinement}
+
+%%%%%%%%%%%%%%%%
+\section{Non-invertible Symmetries and Renormalization}
+
+%%%%%%%%%%%%%%%%
+\section{Applying }
+
+%%%%%%%%%%%%%%%%
+\section{Conclusion}
+
+%%%%%%%%%
+\appendix
+\section{Category Theory}
+This appendix outlines the essential knowledge of category theory required to understand the main discussion. 
+Readers can find more details in \cite{lane1998categories,riehl2017category}.\par
+\subsection{Basic Concepts of Category Theory}
+\begin{definition}
+    A \textit{category} $\mathcal{C}$ consists of:\\
+    \begin{itemize}
+        \item a collection $C_0$ of \textit{objects};
+        \item a collection $C_1$ of \textit{morphisms};
+        \item there is an operation $s$, which assigns to each morphism $f$ an object $s(f)$, called its \textit{source} or \textit{domain};
+        \item there is an operation $t$, which assigns to each morphism $f$ an object $t(f)$, called its \textit{target} or \textit{codomain};
+        \item there is an operation $1$, which assigns to each object $c$ an morphisms $1_c$, called the \textit{identity morphism} on $c$;
+        \item there is a composition operation $\circ$, which assigns a pair of morphisms $f$ and $g$, $t(f)=s(g)$, a morphisms $g\circ f$, called their \textit{composite};
+        \item such that the following properties are satisfied:
+        \begin{itemize}
+            \item $s(1_c)=c=t(1_c)$;
+            \item $s(g\circ f)=s(f)$ and $t(g \circ f)=t(g)$;
+            \item associativity of composition, $(h\circ g)\circ f=h\circ(g\circ f)$;
+            \item composition satisfies the unit law, fo $a\xrightarrow{f}b$, $f\circ 1_a=f=1_b\circ f$.
+        \end{itemize}
+    \end{itemize}
+    we may write $c\in \mathcal{C}$ to indicate $c$ is an object of $\mathcal{C}$. And people often write $\mathrm{Hom}(a,b)$, $\mathrm{Hom}_{\mathcal{C}}(a,b)$, $\mathcal{C}(a,b)$ or $\mathcal{C}(a\to b)$
+    for the collection of morphisms $f:a\to b$, which is called the hom-set of objects $a$ and $b$.
+\end{definition}
+
+\begin{definition}
+    An \textit{isomorphism} between two objects $a,b$ in category $\mathcal{C}$ is a morphism $f:a\to b$, 
+    and there exsits a morphism $g:b\to a$, such that $f\circ g=1_b$ and $g\circ f=1_a$. 
+    $a,b$ are \textit{isomorphic} if there exsits an isomorphism between them. The \textit{isomorphism class} of object $c$ is the set of objects isomorphic to $c$. 
+\end{definition}
+
+\begin{definition}
+    For categories $\mathcal{C}$ and $\mathcal{D}$, a \textit{functor} $T$ is a morphism with source $\mathcal{C}$ and target $\mathcal{D}$, consists of,
+    \begin{itemize}
+        \item an \textit{object function} $T_0$, which assigns to each $c\in \mathcal{C}$ an object $T_0c\in \mathcal{D}$;
+        \item a \textit{morphism function} $T_1$, which assigns to each morphism $f:c\to c'$ of $\mathcal{C}$ an morphisms $T_1f:T_0c\to T_0c'$ of $\mathcal{D}$;
+        \item such that,
+        \begin{equation}
+            T_1(1_c)=1_{T_0c},\qquad T_1(g\circ f)=T_1g\circ T_1f.
+        \end{equation}
+    \end{itemize}
+    I will write both $T_0$ and $T_1$ as $T$ in this article.
+\end{definition}
+\begin{definition}
+    A natural transformation 
+    
+\end{definition}
+
+\begin{definition}
+    For two given categories $\mathcal{B}$ and $\mathcal{C}$, a new category $\mathcal{B}\times \mathcal{C}$, called the \textit{product} of them, is defined as follows. 
+    An object of $\mathcal{B}\times \mathcal{C}$ is a pair $\braket{b,c}$ of $b\in \mathcal{B}$ and $c \in \mathcal{C}$. A morphism $\braket{b,c}\to\braket{b',c'}$ in $\mathcal{B}\times \mathcal{C}$
+    is a pair $\braket{f,g}$ of $f:b\to b'$ and $g:c\to c'$. The composition operation in $\mathcal{B}\times \mathcal{C}$ is defined as,
+    \begin{equation}    
+    \braket{f',g'}\circ\braket{f,g}=\braket{f'\circ f,g'\circ g}
+    \end{equation}     
+\end{definition}
+
+
+
+% \begin{definition}
+%     For a functor $T:\mathcal{D}\to \mathcal{C}$ and $c\in \mathcal{C}$, the \textit{universal morphisms} from $c$ to $T$ 
+%     is a pair $\braket{r,g}$ consisting of an object $r\in \mathcal{D}$ and a morphism $g:c\to Tr$ of $\mathcal{C}$, 
+%     such that to every pair $\braket{s,f}$ with $e\in \mathcal{D}$ and $f:c\to Ts$, there is a unique morphisms $f':r\to s$ of $\mathcal{D}$ with $Tf'\circ u=f$.   
+% \end{definition}
+\subsection{Unitary Fusion Category}
+Main reference for this subsection is \cite{etingof2015tensor}.
+\begin{definition}
+An \textit{additive category} $\mathcal{C}$  is a category satisfying,
+\begin{itemize}
+    \item Every hom-set is equipped with a structure of an abelian group such that the the composition operation is biadditive;
+    \item There exsits a zero object $0\in \mathcal{C}$ such that $\mathcal{C}(0,0)=0$;
+    \item For any objects $c_1,c_2\in \mathcal{C}$, there exsits an object $c\in \mathcal{C}$ and morphisms $p_1:c\to c_1$, $p_2:c\to c_2$, $i_1:c_1\to c$, $i_2:c_2\to c$ 
+    such that $p_1\circ i_1=1_{c_1}$, $p_2\circ i_2=1_{c_2}$ and $i_1\circ p_1+i_2\circ p_2=1_c$. The object $c$ is unique up to a unique isomorphism, is denoted by $c_1\oplus c_2$, 
+    and called the \textit{direct sum} of $c_1$ and $c_2$. $\oplus$ can be viewed as a functor $\oplus:\mathcal{C}\times \mathcal{C}\to \mathcal{C}$. 
+    And we can easily generalize this definition to the case for more than two objects.
+\end{itemize}
+\end{definition}
+\begin{definition}
+    If $\mathbb{F}$ is a field, the $\mathbb{F}$-linear category $\mathcal{C}$  is an additive category whose hom-sets are all linear spaces over $\mathbb{F}$, 
+    and whose composition operation is $\mathbb{F}$-linear. In physics, the field $\mathbb{F}$ is always chosen to be the complex number $\mathbb{C}$. 
+    Unless stated otherwise, all linear spaces in this article are over $\mathbb{C}$. 
+\end{definition}
+\begin{definition}
+    An \textit{idempotent} in category $\mathcal{C}$ is a morphisms $e$ such that $e\circ e=e$. A \textit{splitting} for an idempotent $e:c\to c$ is an triple $(a,r,s)$ 
+    where $a\in \mathcal{C},r\in \mathcal{C}(c,a)$, and $s\in \mathcal{C}(a,c)$ such that $s\circ r=e$ and $r\circ s=1_a$. A lineae category is called \textit{idempotent complete} if 
+    every idempotent admits a splitting.  
+\end{definition}
+
+\begin{definition}
+    A linear category $\mathcal{C}$  is called \textit{semisimple} if,
+    \begin{itemize}
+    \item it admits all finite direct sum;
+    \item it is idempotents complete;
+    \item there exsits objects $c_i$ labeled by an index set $I$ such that,
+    \begin{itemize}
+        \item for any $i,j\in I$, we have
+        \begin{equation}
+            \mathcal{C}(c_i,c_j)\cong \delta_{ij}\mathbb{C},
+        \end{equation}
+        such objects are called \textit{simple};
+        \item for any pair of objects $a,b\in \mathcal{C}$,
+        \begin{equation}
+            \bigoplus_{i\in I}\mathcal{C}(a,c_i)\otimes \mathcal{C}(c_i,b)\to \mathcal{C}(a,b)
+        \end{equation}
+        is an isomorphism. Here $\oplus$ and $\otimes$ are direct sum and tensor product for linear spaces respectively. 
+    \end{itemize}  
+    \end{itemize}
+    $\mathcal{C}$ is called \textit{finitely semisimple} is in addition $\mathcal{C}$ has finitely many isomorphism classes of simple objects. 
+\end{definition}
+I state the following proposition without proof, as it will be used in the text.
+\begin{proposition}
+    Every object of semisimple linear category is a direct sum of simple objects $c_i$ .
+\end{proposition}
+\begin{theorem}
+    dagger structure
+\end{theorem}
+\begin{definition}
+    $*$-algebra
+\end{definition}
+\begin{theorem}
+    unitary algebra condition
+\end{theorem}
+\begin{definition}
+    unitary algebra
+\end{definition}
+
+
+
+\bibliographystyle{unsrt}
+\bibliography{ref}
+
+\end{document}
