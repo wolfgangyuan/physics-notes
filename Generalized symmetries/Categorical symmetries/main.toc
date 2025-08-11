@@ -1,9 +1,0 @@
-\contentsline {section}{\numberline {1}Introduction}{1}{}%
-\contentsline {section}{\numberline {2}Lattice Ising Model}{1}{}%
-\contentsline {section}{\numberline {3}Yang-Mills Mass Gap and Confinement}{1}{}%
-\contentsline {section}{\numberline {4}Non-invertible Symmetries and Renormalization}{1}{}%
-\contentsline {section}{\numberline {5}Applying }{1}{}%
-\contentsline {section}{\numberline {6}Conclusion}{1}{}%
-\contentsline {section}{\numberline {A}Category Theory}{1}{}%
-\contentsline {subsection}{\numberline {A.1}Basic Concepts of Category Theory}{1}{}%
-\contentsline {subsection}{\numberline {A.2}Unitary Fusion Category}{2}{}%
