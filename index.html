@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <title>Physcical Notes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 顶部内容
+        <div id="container-content" class="content">
+            <h2>Welcome to my page!</h2>
+        </div> -->
+        <!-- 顶部按钮 -->
+        <div class="nav">
+            <button class="active" onclick="showContent('notes')" id="notes-button">NOTES</button>
+            <button onclick="showContent('pub')" id="pub-button">PUBLICATIONS</button>
+            <button onclick="showContent('about')" id="about-button">ABOUT</button>
+        </div>
+        <!-- 主体内容 -->
+        <div class="main">
+            <!-- 笔记页面 -->
+            <div id="notes" class="page active">
+                <div id="subject-notes", class="notes-block">
+                    <h4>Subject Notes</h4>
+                    <div class="notes-list">
+                        <h5>Undergraduate level</h5>
+                        <p><a href="Undergraduate courses/Algebra for physics students/main.pdf" class="to-continue" target="_blank">
+                            Algebra for physics students
+                        </a></p>
+                        <p><a href="" class="to-add" target="_blank">
+                            Analytical Mechanics
+                            </a></p>
+                        <p><a href="" class="to-add" target="_blank">
+                            Quantum Mechanics
+                        </a></p>
+                        <p><a href="" class="to-add" target="_blank">
+                            Classical Field Theory
+                        </a></p>
+                        <p><a href="" class="to-add" target="_blank">
+                            Statistical Physics
+                        </a></p>
+                    </div>
+                        <div class="notes-list">
+                        <h5>Graduate level</h5>
+                        <p><a href="" class="to-add" target="_blank">
+                            Lie Groups and Lie Algebras
+                        </a></p>
+                        <!-- <p><a class="to-add" href="" target="_blank">
+                            Algebraic Topology
+                        </a></p> -->
+                        <!-- <p><a class="to-add" href="" target="_blank">
+                            Reading Notes: Quantum Field Theory 
+                        </a> by S. Weinberg</p> -->
+                        <!-- <p><a class="to-continue" href="Mirror symmetry/Reading notes of the MIRROR SYMMETRY/main.pdf" class="reading-note" target="_blank">
+                            Reading Notes: Mirror Symmetry 
+                        </a> by K. Hori, S. Katz, A. Klemm, etc.</p> -->
+                        <p><a class="to-add" href="" target="_blank">
+                            Conformal Field Theory
+                        </a></p>
+                    </div>
+                </div>
+                <div id="topic-notes", class="notes-block">
+                    <h4>Topic Notes</h4>
+                    <div class="notes-list">
+                        <h5>Physics</h5>
+                        <p><a href="Aspects of QFT\Topics in QFT/main.pdf" class="to-continue" target="_blank">
+                            Topics in Quantum Field Theory
+                        </a></p>
+                        <p><a href="Historical notes/Phase transition/main.pdf" class="to-add" target="_blank">
+                            The History of Phase Transition
+                        </a></p>
+                    </div>
+                    <div class="notes-list">
+                        <h5>Mathematics</h5>
+                        <p><a class="to-add" href="Topology/Link%20Theory/main.pdf" target="_blank">
+                            Link theory
+                        </a></p>
+                    </div>
+                </div>
+                <div id="research-notes", class="notes-block">
+                    <h4>Research Notes</h4>
+                    <div class="notes-list">
+                        <h5>Generalized symmetries</h5>
+                        <p><a href="" class="to-add" target="_blank">
+                            Generalized symmetries and phases in Yang-Mills theory
+                        </a></p>
+                        <p><a href="" class="to-add" target="_blank">
+                            Fusion categories
+                        </a></p>
+                    </div>
+                    <div class="notes-list">
+                        <h5>AGT conjecture</h5>
+                        <p><a class="to-add" href="AGT conjecture/Integral/main.pdf" target="_blank">
+                            Integrals in AGT conjecture
+                        </a></p>
+                        <h5>Scattering amplitudes</h5>
+                        <p><a href="https://www.diva-portal.org/smash/record.jsf?dswid=6851&pid=diva2%3A1970698&c=5&searchType=SIMPLE&language=en&query=qingjie+yuan&af=%5B%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all" target="_blank">
+                            Helicity Selection Rules in Double Copy Formulae for Scattering Amplitudes
+                        </a></p>
+                    </div>
+                </div>
+                <div id="explain">
+                    <p>
+                        For details about note classifications and other information, please see the ABOUT page. 
+                        If older versions, LaTeX source files or used codes of the notes are availiable, you can find them in the 
+                        <a href="https://github.com/wolfgangyuan/physics-notes/" target="_blank">GitHub repository</a> 
+                    </p>
+                </div>
+            </div>
+
+            <!-- 发表页面 -->
+            <div id="pub" class="page">
+                <h3>Publications</h3>
+                <span class="pub">
+                    <div id="pub1" style="margin: 5px 0 5px 20px;">
+                        <a href="https://link.springer.com/article/10.1007/JHEP10(2024)159" target="_blank" style="color: #BBE7FE; text-decoration: none;">Proof of <i>A<sub>n</sub></i> AGT conjecture at &#946=1</a>
+                        <a href="https://inspirehep.net/literature/2661258" class="inspire" target="_blank">[InspireHEP]</a>
+                        <a href="https://arxiv.org/abs/2305.11839" class="arxiv" target="_blank">[arXiv]</a>
+                    </div>
+                    <div id="pub2" style="margin: 5px 0 5px 20px;">
+                        <a href="https://link.springer.com/article/10.1007/JHEP09(2024)085" target="_blank" style="color: #BBE7FE; text-decoration: none;">Proof of 5D <i>A<sub>n</sub></i> AGT conjecture at &#946=1</a>
+                        <a href="https://inspirehep.net/literature/2789182" class="inspire" target="_blank">[InspireHEP]</a>
+                        <a href="https://arxiv.org/abs/2405.13676" class="arxiv" target="_blank">[arXiv]</a>
+                    </div>
+                </span>
+            </div>
+
+            <!-- 关于页面 -->
+            <div id="about" class="page">
+                <!-- 作者介绍 -->
+                <div id="author-intro">
+                    <h3>Information of the Author</h3>
+                    <p>
+                        Name: Qingjie Yuan 袁庆杰 
+                        <a href="https://orcid.org/0009-0003-5281-4671" target="_blank">[ORCID]</a>
+                        <a href="https://inspirehep.net/authors/2661259" target="_blank">[InspireHEP]</a>
+                    </p>
+                    <p>E-mail: qingjie.yuan.9461@student.uu.se</p>
+                </div>
+
+                <!-- 文档介绍 -->
+                <div id="content-intro">
+                    <h3>Explanation of The Classifications</h3>
+                    <p style="text-indent: 2em; margin: 6px">
+                        The first classification concerns the status of completion, which has three cases: 
+                        not added, incomplete, and completed. These are represented respectively by strikethrough text, gray links, and blue links.
+                    </p>
+                    <p style="text-indent: 2em; margin: 6px">
+                        The second classification is based on the breadth of content, as reflected in the three main headings on the homepage.
+                        Subject notes refer to notes on a subdiscipline. They are relatively self-contained and comprehensive.
+                        Topic notes focus on a specific theme, usually at the level of a course rather than frontier research.
+                        Their scope is narrower, but they are widely useful across many research areas. Research notes are dedicated to a particular research direction, 
+                        with an even narrower scope but greater depth.
+                        Thus, from subject to topic to research notes, the breadth decreases while the depth increases.
+                    </p>
+                    <p style="text-indent: 2em; margin: 6px">
+                        The third classification concerns the mode of organization, also in three forms: record-style notes, logical notes, and historical notes.
+                        The first type records material while reading textbooks or papers or attending lectures, sometimes including detailed derivations.
+                        The second type is written after finishing a topic, arranged step by step in a logical order, often as a personal summary.
+                        The third type is structured along the historical development of an idea, usually motivated by an interest in its origins and exploration process.
+                        These three styles often appear successively as one's study progresses.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+
+
+
+
+
+</html>

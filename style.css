@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #EFF1DB; /* 背景颜色 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #BBE7FE;
+    line-height: 1.2;
+    height: 100vh;
+}
+
+.container {
+    background-color: #D3B5E5;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 7%;
+    padding: 3%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav {
+    margin:0 20px 0 20px;
+}
+/* 导航按钮设置 */
+.nav button {
+    padding: 5px 10px 2px 10px;
+    border: 2px solid #003060;
+    border-bottom: 0px;
+    border-radius: 15px 15px 0 0;
+    background-color: #D3B5E5;
+    cursor: pointer;
+    font-size: 15px;
+    transition: backgroud 0.3s;
+}
+
+.nav button:hover {
+    background-color: #68bbe3;
+}
+
+.nav button.active{
+    color: #D3B5E5;
+    background: #003060;
+}
+
+.main {
+    margin: none;
+    background-color: #003060;
+    display: flex;
+    border-radius: 8px;
+    width: 85%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+p {
+   font-size: 16px;
+   margin: 2px 0 2px 0;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 30px 0 10px 0px;
+}
+
+h4 {
+    font-size: 20px;
+    margin: 18px 0 8px 0;
+}
+
+h5 {
+    font-size: 16px;
+    margin: 12px 0 4px 0;
+}
+
+div.notes-block {
+    margin: 0px 0 30px 20px;
+}
+
+div.notes-list {
+    margin: 10px 0 10px 20px;
+}
+
+
+/* a有三种classes: 空(默认为finished), to-add, to-continue. 分别用蓝色, 划线灰色和灰色表示 */
+a {
+    color: #0e86d4;
+}
+
+a.to-add {
+    color :gray;
+    text-decoration: line-through;
+}
+
+a.to-continue {
+    color: gray;
+}
+
+/* 控制显示内容, 无active不显示, 有active显示, 通过js的showContent函数控制 */
+.page{
+    display: none;
+}
+.page.active {
+    display: block;
+}
