@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-    <title>Physcical Notes</title>
+    <title>Physical Notes</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,6 +19,7 @@
         <!-- 顶部按钮 -->
         <div class="nav">
             <button class="active" onclick="showContent('notes')" id="notes-button">NOTES</button>
+            <button onclick="showContent('log')" id="log-button">LOGS</button>
             <button onclick="showContent('pub')" id="pub-button">PUBLICATIONS</button>
             <button onclick="showContent('about')" id="about-button">ABOUT</button>
         </div>
@@ -24,9 +28,9 @@
             <!-- 笔记页面 -->
             <div id="notes" class="page active">
                 <div id="subject-notes", class="notes-block">
-                    <h4>Subject Notes</h4>
+                    <h3>Subject Notes</h3>
                     <div class="notes-list">
-                        <h5>Undergraduate level</h5>
+                        <h4>Undergraduate level</h4>
                         <p><a href="Undergraduate courses/Algebra for physics students/main.pdf" class="to-continue" target="_blank">
                             Algebra for Physics Students
                         </a></p>
@@ -44,7 +48,7 @@
                         </a></p>
                     </div>
                         <div class="notes-list">
-                        <h5>Graduate level</h5>
+                        <h4>Graduate level</h4>
                         <p><a href="" class="to-add" target="_blank">
                             Lie Groups and Lie Algebras
                         </a></p>
@@ -63,9 +67,9 @@
                     </div>
                 </div>
                 <div id="topic-notes", class="notes-block">
-                    <h4>Topic Notes</h4>
+                    <h3>Topic Notes</h3>
                     <div class="notes-list">
-                        <h5>Physics</h5>
+                        <h4>Physics</h4>
                         <p><a href="Aspects of QFT\Topics in QFT/pub.pdf" class="to-continue" target="_blank">
                             Topics in Quantum Field Theory
                         </a></p>
@@ -74,29 +78,26 @@
                         </a></p>
                     </div>
                     <div class="notes-list">
-                        <h5>Mathematics</h5>
+                        <h4>Mathematics</h4>
                         <p><a class="to-add" href="Topology/Link%20Theory/main.pdf" target="_blank">
-                            Link theory
+                            Link Theory
                         </a></p>
                     </div>
                 </div>
                 <div id="research-notes", class="notes-block">
-                    <h4>Research Notes</h4>
+                    <h3>Research Notes</h3>
                     <div class="notes-list">
-                        <h5>Generalized symmetries</h5>
-                        <p><a href="" class="to-add" target="_blank">
+                        <h4>Generalized symmetries</h4>
+                        <p><a href="https://www.diva-portal.org/smash/record.jsf?dswid=4030&pid=diva2%3A2026778&c=5&searchType=SIMPLE&language=en&query=qingjie+yuan&af=%5B%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all" target="_blank">
                             Generalized symmetries and phases in Yang-Mills theory
-                        </a></p>
-                        <p><a href="" class="to-add" target="_blank">
-                            Fusion categories
                         </a></p>
                     </div>
                     <div class="notes-list">
-                        <h5>AGT conjecture</h5>
+                        <h4>AGT conjecture</h4>
                         <p><a class="to-add" href="AGT conjecture/Integral/main.pdf" target="_blank">
                             Integrals in AGT conjecture
                         </a></p>
-                        <h5>Scattering amplitudes</h5>
+                        <h4>Scattering amplitudes</h4>
                         <p><a href="https://www.diva-portal.org/smash/record.jsf?dswid=6851&pid=diva2%3A1970698&c=5&searchType=SIMPLE&language=en&query=qingjie+yuan&af=%5B%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all" target="_blank">
                             Helicity Selection Rules in Double Copy Formulae for Scattering Amplitudes
                         </a></p>
@@ -105,23 +106,33 @@
                 <div id="explain">
                     <p>
                         For details about note classifications and other information, please see the ABOUT page. 
-                        If older versions, LaTeX source files or used codes of the notes are availiable, you can find them in the 
+                        If older versions, LaTeX source files or used codes of the notes are available, you can find them in the 
                         <a href="https://github.com/wolfgangyuan/physics-notes/" target="_blank">GitHub repository</a> 
                     </p>
                 </div>
             </div>
 
+            <! --日志页面 -->
+            <div id="log" class="page">
+				<div id="sample">
+					<a href="Logs/Sample/main.pdf">Sample</a>
+				</div>
+				<div id="log2026", class="logs-block">
+					<h3>2026</h3>
+				</div>
+				
+            </div>
             <!-- 发表页面 -->
             <div id="pub" class="page">
                 <h3>Publications</h3>
                 <span class="pub">
                     <div id="pub1" style="margin: 5px 0 5px 20px;">
-                        <a href="https://link.springer.com/article/10.1007/JHEP10(2024)159" target="_blank" style="color: #BBE7FE; text-decoration: none;">Proof of <i>A<sub>n</sub></i> AGT conjecture at &#946=1</a>
+                        <a href="https://link.springer.com/article/10.1007/JHEP10(2024)159" target="_blank" style="text-decoration: none;">Proof of <i>A<sub>n</sub></i> AGT conjecture at &#946=1</a>
                         <a href="https://inspirehep.net/literature/2661258" class="inspire" target="_blank">[InspireHEP]</a>
                         <a href="https://arxiv.org/abs/2305.11839" class="arxiv" target="_blank">[arXiv]</a>
                     </div>
                     <div id="pub2" style="margin: 5px 0 5px 20px;">
-                        <a href="https://link.springer.com/article/10.1007/JHEP09(2024)085" target="_blank" style="color: #BBE7FE; text-decoration: none;">Proof of 5D <i>A<sub>n</sub></i> AGT conjecture at &#946=1</a>
+                        <a href="https://link.springer.com/article/10.1007/JHEP09(2024)085" target="_blank" style="text-decoration: none;">Proof of 5D <i>A<sub>n</sub></i> AGT conjecture at &#946=1</a>
                         <a href="https://inspirehep.net/literature/2789182" class="inspire" target="_blank">[InspireHEP]</a>
                         <a href="https://arxiv.org/abs/2405.13676" class="arxiv" target="_blank">[arXiv]</a>
                     </div>
@@ -146,7 +157,7 @@
                     <h3>Explanation of The Classifications</h3>
                     <p style="text-indent: 2em; margin: 6px">
                         The first classification concerns the status of completion, which has three cases: 
-                        not added, incomplete, and completed. These are represented respectively by strikethrough text, gray links, and blue links.
+                        not added, incomplete, and completed. These are represented respectively by strikethrough text, wine red links, and navy blue links.
                     </p>
                     <p style="text-indent: 2em; margin: 6px">
                         The second classification is based on the breadth of content, as reflected in the three main headings on the homepage.
